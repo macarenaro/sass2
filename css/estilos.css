@@ -1,0 +1,81 @@
+body {
+  background-color: #f6ffe7; }
+
+.col-1 {
+  width: 100%; }
+
+.col-2 {
+  width: 200%; }
+
+.col-3 {
+  width: 300%; }
+
+.col-4 {
+  width: 400%; }
+
+.col-5 {
+  width: 500%; }
+
+.col-6 {
+  width: 600%; }
+
+.texto-red {
+  color: red;
+  background-color: beige; }
+
+.texto-blue {
+  color: blue;
+  background-color: beige; }
+
+.texto-black {
+  color: black;
+  background-color: beige; }
+
+.puma-bg {
+  background-image: url(../medios/puma.jpg);
+  width: 50%; }
+
+.loro-bg {
+  background-image: url(../medios/loro.jpg);
+  width: 50%; }
+
+.perro-bg {
+  background-image: url(../medios/perro.jpg);
+  width: 50%; }
+
+.icono-fb {
+  color: blue; }
+
+.icono-tw {
+  color: skyblue; }
+
+.icono-ig {
+  color: violet; }
+
+.boton, .boton-enviar {
+  width: 200px;
+  height: 50px;
+  background-color: white;
+  text-align: center;
+  color: black;
+  border-radius: 20px;
+  border: 1px solid black; }
+
+.boton-enviar {
+  background-color: aquamarine;
+  color: red; }
+
+div {
+  width: 100px;
+  height: 200px; }
+
+section {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-end; }
+
+article {
+  display: flex;
+  flex-direction: row;
+  justify-content: center; }

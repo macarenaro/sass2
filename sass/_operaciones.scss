@@ -1,0 +1,110 @@
+$ancho: 100px;
+$vista: tablet;
+// @if (condicion ==,!=,<,>) {
+//     si se cumple, realiza esto
+// }@else{
+//     si no, se realiza esto
+// }
+
+@if ($ancho < 50px) {
+    body{
+        background-color: aqua;
+    }
+}@else{
+    body{
+        background-color: rgb(246, 255, 231);
+    }
+}
+
+// For
+@for $i from 1 through 6 {
+    .col-#{$i} {
+        width: 100% * $i;
+    }
+}
+
+
+// Each
+@each $colores in red, blue, black {
+    .texto-#{$colores}{
+        color: #{$colores};
+        background-color: beige;
+    }
+}
+
+@each $animales in puma,loro,perro {
+    .#{$animales}-bg {
+        background-image: url(../medios/#{$animales}.jpg);
+        width: 50%;
+    }
+}
+
+// maps
+// $map: (
+//     variable1:valor1,
+//     variable2:valor2
+// )
+
+$redes-sociales: (
+    fb: blue,
+    tw: skyblue,
+    ig: violet,
+);
+
+@each $variable, $valor in $redes-sociales {
+    .icono-#{$variable}{
+        color: $valor;
+    }
+}
+
+// extend
+
+.boton{
+	width:200px;
+	height:50px;
+	background-color:white;
+	text-align:center;
+	color:black;
+	border-radius:20px;
+	border:1px solid black;
+}
+
+.boton-enviar{
+    @extend .boton;
+    background-color: aquamarine;
+    color: red;
+}
+
+// mixins
+@mixin tamanio ($ancho,$alto){
+    width: $ancho;
+    height: $alto;
+}
+
+div{
+    @include tamanio(100px, 200px )
+}
+
+@mixin flex ($direction,$justify,$align){
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+
+}
+
+section{
+    @include flex(row,center , flex-end )
+}
+
+
+
+@mixin row-center {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+article{
+    @include row-center()
+}
